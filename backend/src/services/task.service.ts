@@ -25,8 +25,7 @@ export const listTasks = async (userId: string, filters: TaskFilters) => {
     ...(filters.search
       ? {
           title: {
-            contains: filters.search,
-            mode: "insensitive"
+            contains: filters.search          
           }
         }
       : {})
